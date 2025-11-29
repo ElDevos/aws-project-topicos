@@ -1,0 +1,8 @@
+<h1>Products</h1>
+<a href="/products/create">Create Product</a>
+<ul>
+{% for p in products %}
+    <li>{{ p.name }} - ${{ p.price }} (Tax: {{ p.tax }})</li>
+{% endfor %}
+</ul>
+<a href="/">Back</a>
