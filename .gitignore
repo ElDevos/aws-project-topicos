@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+
+# IDEs
+.vscode/
+.idea/
+.DS_Store
+
+# Project specific
+GIT_SETUP.md
+RUNNING.md
