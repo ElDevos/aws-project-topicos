@@ -2,6 +2,10 @@ import os
 from flask import Flask, request, jsonify
 import mysql.connector
 from mysql.connector import Error
+from dotenv import load_dotenv
+
+# Cargar variables de entorno
+load_dotenv()
 
 app = Flask(__name__)
 
@@ -57,10 +61,12 @@ def init_database():
             print(" Insertando registros de ejemplo en 'users'...")
             cursor.execute("""
                 INSERT INTO users (name, age, gender) VALUES
-                ('Juan Pérez', 25, 'M'),
-                ('María García', 30, 'F');
+                ('Gabriel Ruiz', 22, 'M'),
+                ('Kazim Jesse', 22, 'M'),
+                ('Eduardo Maestre', 22, 'M'),
+                ('David Zhang', 22, 'M');
             """)
-            print(" 2 usuarios de ejemplo insertados")
+            print(" 4 usuarios de ejemplo insertados")
         else:
             print(f"La tabla 'users' ya tiene {user_count} registro(s)")
         

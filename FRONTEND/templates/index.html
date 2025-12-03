@@ -1,13 +1,36 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Frontend</title>
-</head>
-<body>
-    <h1>Frontend Flask</h1>
-    <ul>
-        <li><a href="/products">Products</a></li>
-        <li><a href="/users">Users</a></li>
-    </ul>
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block content %}
+<div class="p-5 mb-4 bg-light rounded-3 border">
+    <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold">LolaTech</h1>
+        <h2 class="fs-4 text-muted mb-4">Sistema de Inventario</h2>
+        <p class="col-md-8 fs-4">Bienvenido a LolaTech, su socio estratégico en soluciones tecnológicas. Gestionamos su
+            inventario de manera eficiente, segura y escalable.</p>
+        <hr class="my-4">
+        <p>Utilice las herramientas a continuación para administrar sus recursos.</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <a href="{{ url_for('products') }}" class="btn btn-primary btn-lg px-4 me-md-2">Gestionar Productos</a>
+            <a href="{{ url_for('users') }}" class="btn btn-outline-secondary btn-lg px-4">Gestionar Usuarios</a>
+        </div>
+    </div>
+</div>
+
+<div class="row align-items-md-stretch">
+    <div class="col-md-6">
+        <div class="h-100 p-5 text-white bg-dark rounded-3">
+            <h2>Sobre Nosotros</h2>
+            <p>En LolaTech, nos dedicamos a optimizar procesos empresariales mediante software de vanguardia. Nuestra
+                misión es simplificar la gestión de activos para empresas modernas.</p>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="h-100 p-5 bg-body-tertiary border rounded-3">
+            <h2>Soporte</h2>
+            <p>¿Necesita ayuda? Nuestro equipo de soporte está disponible 24/7 para asistirle en cualquier incidencia
+                técnica o duda sobre la plataforma.</p>
+            <button class="btn btn-outline-dark" type="button">Contactar Soporte</button>
+        </div>
+    </div>
+</div>
+{% endblock %}
