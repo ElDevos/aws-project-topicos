@@ -10,3 +10,27 @@
         <hr class="my-4">
         <p>Utilice las herramientas a continuación para administrar sus recursos.</p>
         <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <a href="{{ url_for('products') }}" class="btn btn-primary btn-lg px-4 me-md-2">Gestionar Productos</a>
+            <a href="{{ url_for('users') }}" class="btn btn-outline-secondary btn-lg px-4">Gestionar Usuarios</a>
+        </div>
+    </div>
+</div>
+
+<div class="row align-items-md-stretch">
+    <div class="col-md-6">
+        <div class="h-100 p-5 text-white bg-dark rounded-3">
+            <h2>Sobre Nosotros</h2>
+            <p>En LolaTech, nos dedicamos a optimizar procesos empresariales mediante software de vanguardia. Nuestra
+                misión es simplificar la gestión de activos para empresas modernas.</p>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="h-100 p-5 bg-body-tertiary border rounded-3">
+            <h2>Soporte</h2>
+            <p>¿Necesita ayuda? Nuestro equipo de soporte está disponible 24/7 para asistirle en cualquier incidencia
+                técnica o duda sobre la plataforma.</p>
+            <button class="btn btn-outline-dark" type="button">Contactar Soporte</button>
+        </div>
+    </div>
+</div>
+{% endblock %}
